@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <title>Exemplo de Layout</title>
+</head>
+<body>
+    <div class="topo">
+        <img src="imagens/Capturar uol.PNG" alt="UOL" class="uol">
+        <ion-icon alt="People" class="peopole" name="people"></ion-icon>
+        </div>
+
+    <div class="conteudo">
+        <h1>Conteúdo da Página</h1>
+        <p id="enter" class="menssagem_enter">(18:26:30)João: entrou na sala</p>
+        <p class="menssagem_minha">(18:27:10)João: Bom dia pessoal!</p>
+        <p class="menssagem_alheia">(18:27:10)Maria: Bom dia meu nome</p>
+        <p class="menssagem_privada">(18:29:05)João menssagem reservada pra Maria: poderia me atender agora ?</p>
+        <p class="menssagem_saida">(18:30:00)Maria saiu da sala</p>
+       
+    </div>
+
+    <div class="escrever">
+        <textarea type="text" class="input" placeholder="Escreva sua menssagem aqui..."></textarea>
+     <div class="options">
+        <button onclick="enviar_mensagem()" id="bot">Enviar</button>
+        <button class="saida" onclick="sair_sala()">Sair</button>
+    </div>
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="display.js"></script>
+    <script src="api.js"></script>
+</body>
+</html>

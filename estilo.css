@@ -1,0 +1,118 @@
+body {
+    background-color: #f3f3f3;
+    margin: 0;
+    display: flex; /* Habilita o Flexbox no body */
+    flex-direction: column; /* Organiza os filhos em coluna (topo, conteudo, escrever) */
+    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
+    box-sizing: border-box; /* Garante que padding e border não afetem a altura total */
+}
+
+.topo {
+    background-color: #ffffff;
+    border: 1px solid gray;
+    width: 100%;
+    height: 13%;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 100;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.uol {
+    width: 75px;
+    height: 53px;
+}
+
+.peopole {
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+}
+
+.conteudo {
+    flex-grow: 1; /* A div 'conteudo' vai crescer para ocupar o espaço restante */
+    background-color: #ffffff; /* Background azul temporário para visualização */
+    overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo exceder a altura */
+    padding-top: 13%; /* Espaço para não ficar atrás do topo */
+    padding-bottom: 13%; /* Espaço para não ficar atrás da barra de escrever */
+    box-sizing: border-box; /* Garante que o padding não afete a altura total */
+}
+
+.escrever {
+    background-color: #ffffff;
+    border: 1px solid gray;
+    width: 100%;
+    height: 13%;
+    bottom: 0;
+    left: 0;
+    position: fixed;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 10px;
+}
+
+.input {
+    flex-grow: 1;
+    height: 70%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 8px;
+    margin-right: 10px;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+#bot {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.papel {
+    width: 30px;
+    height: auto;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    pointer-events: none; /* Adicione esta linha */
+}
+.saida{
+    width: 30px;
+    height: 30px; 
+}
+.menssagem_enter{
+    width: 100%;
+    height: 40px;
+    top: 106px;
+    border-radius: 2px;
+    background-color: #ccc;
+
+}
+.menssagem_privada{
+    width: 100%;
+    height: 40px;
+    top: 106px;
+    border-radius: 2px;
+    background-color: red;
+}
+.menssagem_saida{
+    width: 100%;
+    height: 40px;
+    top: 106px;
+    border-radius: 2px;
+    background-color: #ccc;
+}
+.options{
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+}
