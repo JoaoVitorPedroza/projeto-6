@@ -4,14 +4,60 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="estilo.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Encode+Sans:wght@100..900&family=IBM+Plex+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Roboto&family=Roboto+Condensed:wght@100..900&display=swap" rel="stylesheet">
     <title>Exemplo de Layout</title>
 </head>
 <body>
     <div class="topo">
         <img src="imagens/Capturar uol.PNG" alt="UOL" class="uol">
-        <ion-icon alt="People" class="peopole" name="people"></ion-icon>
+        <button id="selecionar" onclick="barra_lateral()">Clickar
+        <ion-icon class="pessoas" alt="People" class="peopole" name="people"></ion-icon>
+        </button>
         </div>
-
+        <div id="esconde" class="barra_puxada">
+            <div class="topo_barra">
+            <h1 class="caixa">Escolha um contato para enviar: </h1>
+            </div>
+            <div class="colunas">
+            <div class="colunas_icones">
+            <div class="coluna1">
+             <button class="botao_barra" id="selecionar_este" onclick="">
+            <ion-icon class="pessoa1"></ion-icon>
+            </button>
+            </div>
+              <div class="coluna2">
+           <button class="botao_barra" id="selecionar_este" onclick="">
+            <ion-icon class="pessoa1" name="person-circle"></ion-icon>
+            </button>
+            </div>
+              <div class="coluna3">
+             <button class="botao_barra" id="selecionar_este" onclick="">
+            <ion-icon class="pessoa1" name="person-circle"></ion-icon>
+            </button>
+            </div>
+            </div>
+            <!--separador-->
+            <div>
+            <h3 class="h3_1">Todos</h3>
+            <h3 class="h3_2">João</h3>
+            <h3 class="h3_3">Maria</h3>
+            </div>
+            </div>
+            <!--barra da visibilidade-->
+            <h1 class="main_2">Escolha a visivilidade:</h1>
+            <div class="escolhas">
+                <div class="publico">
+                    <ion-icon class="margem2" name="lock-open"></ion-icon>
+                    <p class="margem1">Público</p>
+                </div>
+                <div class="privado">
+                    <ion-icon class="margem3" name="lock-closed"></ion-icon>
+                    <p class="margem4">Privado</p>
+                </div>
+            </div>
+            </div>
     <div class="conteudo">
         <h1>Conteúdo da Página</h1>
         <p id="enter" class="menssagem_enter">(18:26:30)João: entrou na sala</p>
@@ -26,11 +72,11 @@
         <textarea type="text" class="input" placeholder="Escreva sua menssagem aqui..."></textarea>
      <div class="options">
         <button onclick="enviar_mensagem()" id="bot">Enviar</button>
-        <button class="saida" onclick="sair_sala()">Sair</button>
     </div>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="display.js"></script>
     <script src="api.js"></script>
 </body>

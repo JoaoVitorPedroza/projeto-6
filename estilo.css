@@ -41,6 +41,8 @@ body {
     padding-top: 13%; /* Espaço para não ficar atrás do topo */
     padding-bottom: 13%; /* Espaço para não ficar atrás da barra de escrever */
     box-sizing: border-box; /* Garante que o padding não afete a altura total */
+    margin-left: 0; /* Inicialmente sem margem */
+    transition: margin-left 0.3s ease-in-out;
 }
 
 .escrever {
@@ -115,4 +117,123 @@ body {
     justify-content: flex-end;
     align-items: flex-end;
     flex-direction: column;
+}
+.pessoas{
+  font-family: 'Font Awesome 5 Free'; /* Ou a sua biblioteca de ícones */
+  font-weight: 900; /* Estilo do ícone */
+  content: '\f007'; /* Código do ícone (exemplo de usuário) */
+  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+  width: 45px;
+  height:45px;
+}
+button {
+  /* Seus estilos de botão */
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  background-color: #ffffff;
+}
+.barra_puxada {
+    z-index: 100;
+    width: 300px; /* Defina a largura desejada */
+    height: 100%;
+    background-color: #f8f8f8;
+    position: fixed;
+    top: 0;
+    left: -300px; /* Esconde inicialmente (ajuste conforme a largura) */
+    box-sizing: border-box;
+    overflow-y: auto;
+}
+.barra_puxada.mostrar-barra {
+
+}
+
+.conteudo.barra-aberta {
+    margin-left: 300px; /* Margem para o espaço da barra */
+}
+.caixa{
+left: 116px;
+font-family: Roboto;
+font-weight: 700;
+font-size: 16px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+
+}
+.topo_barra{
+    border: solid 1px gray;
+    width: 99.1%; 
+    height: 150px;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+h3{
+    left: 100px;
+    position: absolute;
+}
+.h3_1{
+    margin-top: 10px;
+}
+.h3_2{
+    margin-top: 80px;
+}
+.h3_3{
+    margin-top: 150px;
+}
+.pessoa1{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+.bottao_barra{
+    width: 100px;
+    height: 100px;
+    background-color: #f8f8f8;
+    display: none;
+}
+
+.colunas{
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+.colunas_icones{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.main_2{
+    left: 100px;
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+.escolhas{
+    left: 100px;
+    width: 99.1%;
+    height: 80px;
+}
+.margem1{
+    position: absolute;
+    margin-left: 100px;
+}
+.margem2{
+    position: absolute;
+    right: 250px;
+    margin-top: 19px;
+}
+.margem4{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 50px;
+}
+.margem3{
+    position: absolute;
+    right: 250px;
+    margin-top: 49px;  
 }
