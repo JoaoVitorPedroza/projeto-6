@@ -103,7 +103,7 @@ body {
     height: 40px;
     top: 106px;
     border-radius: 2px;
-    background-color: red;
+    background-color: #ffdede;
 }
 .menssagem_saida{
     width: 100%;
@@ -247,4 +247,7 @@ h3{
 }
 .espacamento{
     margin-top: 20px;
+}
+.botao_visibilidade{
+    background-color: #FFFFFF00;
 }
