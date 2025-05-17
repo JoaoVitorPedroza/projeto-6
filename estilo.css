@@ -39,7 +39,7 @@ body {
     background-color: #ffffff; /* Background azul temporário para visualização */
     overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo exceder a altura */
     padding-top: 13%; /* Espaço para não ficar atrás do topo */
-    padding-bottom: 13%; /* Espaço para não ficar atrás da barra de escrever */
+    padding-bottom: 80px; /* Espaço para não ficar atrás da barra de escrever */
     box-sizing: border-box; /* Garante que o padding não afete a altura total */
     margin-left: 0; /* Inicialmente sem margem */
     transition: margin-left 0.3s ease-in-out;
@@ -49,7 +49,7 @@ body {
     background-color: #ffffff;
     border: 1px solid gray;
     width: 100%;
-    height: 13%;
+    height: 10%;
     bottom: 0;
     left: 0;
     position: fixed;
@@ -92,8 +92,8 @@ body {
 }
 .menssagem_enter{
     width: 100%;
-    height: 40px;
-    top: 106px;
+    height: 30px;
+    top: 0px;
     border-radius: 2px;
     background-color: #ccc;
 
@@ -144,10 +144,10 @@ button {
     box-sizing: border-box;
     overflow-y: auto;
 }
-.barra_puxada.mostrar-barra {
 
+.conteudo{
+    margin-top: -100px;
 }
-
 .conteudo.barra-aberta {
     margin-left: 300px; /* Margem para o espaço da barra */
 }
@@ -177,13 +177,19 @@ h3{
     position: absolute;
 }
 .h3_1{
-    margin-top: 10px;
+    margin-top: 0px;
 }
 .h3_2{
-    margin-top: 80px;
+    margin-top: 65px;
 }
 .h3_3{
-    margin-top: 150px;
+    margin-top: 130px;
+}
+.user3{
+    margin-top: 200px;
+}
+.user4{
+    margin-top: 270px;
 }
 .pessoa1{
     width: 25px;
@@ -193,8 +199,10 @@ h3{
 .bottao_barra{
     width: 100px;
     height: 100px;
-    background-color: #f8f8f8;
+    background-color: red;
     display: none;
+    position: absolute;
+    margin-top: 19px;
 }
 
 .colunas{
@@ -210,7 +218,7 @@ h3{
 .main_2{
     left: 100px;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 80px;
     margin-left: 50px;
 }
 .escolhas{
@@ -236,4 +244,7 @@ h3{
     position: absolute;
     right: 250px;
     margin-top: 49px;  
+}
+.espacamento{
+    margin-top: 20px;
 }
