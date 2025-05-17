@@ -2,16 +2,17 @@ const conteudoDiv = document.querySelector('.conteudo');
 const inputMensagem = document.querySelector('.input');
 const barraPuxada = document.querySelector('.barra_puxada');
 const botaoPessoas = document.getElementById('selecionar');
+var data = new Date();
 let modoPrivado = false;
 let destinatarioPrivado = null;
 let nomeUsuario = null;
 let esconde = document.getElementById("esconde");
-let botao = document.getElementById("selecionar"); // Substitua "seuBotao" pelo ID do seu botão
-let aberto = true; // Variável para rastrear se a barra está aberta ou fechada
+let botao = document.getElementById("selecionar"); 
+let aberto = true; 
 function limparMensagens() {
-    // Remove todas as mensagens (exceto o título, se quiser manter)
+    
     const conteudoDiv = document.querySelector('.conteudo');
-    // Remove todos os filhos, exceto o h1 (título)
+ 
     Array.from(conteudoDiv.children).forEach(child => {
         if (child.tagName !== 'H1') {
             conteudoDiv.removeChild(child);
@@ -19,6 +20,9 @@ function limparMensagens() {
     });
 }
 function formatarHora(data) {
+    if (!(data instanceof Date) || isNaN(data.getTime())) {
+        return "--:--:--";
+    }
     const horas = String(data.getHours()).padStart(2, '0');
     const minutos = String(data.getMinutes()).padStart(2, '0');
     const segundos = String(data.getSeconds()).padStart(2, '0');
@@ -28,24 +32,27 @@ function formatarHora(data) {
 
 function exibirMensagem(mensagem) {
     if (conteudoDiv && mensagem.from && mensagem.text && mensagem.time && mensagem.type) {
-        // FILTRO para mensagens privadas
+       
         if (
             mensagem.type === "private_message" &&
             mensagem.from !== nomeUsuario &&
             mensagem.to !== nomeUsuario
         ) {
-            // Não exibe a mensagem privada se não for para mim ou enviada por mim
             return;
         }
 
         const mensagemElement = document.createElement('p');
-        // Formata o horário
+     
         let hora = mensagem.time;
         if (typeof hora === "string") {
             hora = new Date(hora);
         }
+        
+        if (!(hora instanceof Date) || isNaN(hora.getTime())) {
+            hora = new Date();
+        }
 
-        // Exibe o destinatário na mensagem privada
+       
         if (mensagem.type === "private_message") {
             mensagemElement.textContent = `(${formatarHora(hora)}) ${mensagem.from} para ${mensagem.to}: ${mensagem.text}`;
             mensagemElement.className = "menssagem_privada";
@@ -59,7 +66,7 @@ function exibirMensagem(mensagem) {
 
         conteudoDiv.appendChild(mensagemElement);
 
-        // Limita o número de mensagens a 20 (mantendo o título, se houver)
+        
         const mensagens = conteudoDiv.querySelectorAll('p');
         if (mensagens.length > 20) {
             conteudoDiv.removeChild(mensagens[0]);
@@ -79,13 +86,13 @@ function obterNomeUsuario() {
         entrarNaSala(nomeUsuario.trim())
             .then(() => {
                 limparMensagens();
-                // Próximo passo: iniciar o intervalo para manter a conexão e buscar mensagens
+                
                 console.log("Entrou na sala com sucesso!");
-                // Chamar manterConexao() e buscarMensagens() aqui
+             
             })
             .catch(error => {
-                alert(error.message); // Exibe a mensagem de erro para o usuário
-                obterNomeUsuario(); // Pede o nome novamente
+                alert(error.message); 
+                obterNomeUsuario(); 
             });
     } else {
         alert("Por favor, digite um nome válido.");
@@ -121,22 +128,21 @@ function barra_lateral() {
     }
 }
 
-// Chama a função para obter o nome do usuário ao carregar a página
 function voltar_todos(){
     console.log("clickado");
 }
 function selecionarPrivado() {
     window.alert("Você selecionou: Privado");
-    // Aqui você pode definir uma variável para o modo privado
+    
 }
 function selecionarPublico() {
     window.alert("Você selecionou: Público");
-    // Aqui você pode definir uma variável para o modo público
+    
 }
 function atualizarNomesUsuarios(participantes) {
-    // IDs dos elementos onde os nomes serão exibidos
+   
     const ids = ['log1', 'log2', 'log3', 'log4'];
-    // Nomes padrão para quando não houver usuário
+    
     const nomesPadrao = ['User 1', 'User 2', 'User 3', 'User 4'];
 
     for (let i = 0; i < ids.length; i++) {
@@ -162,7 +168,7 @@ function buscarParticipantes() {
         });
 }
 
-// Já existe este setInterval, só garanta que buscarParticipantes está correto:
+
 setInterval(() => {
     if (typeof buscarParticipantes === "function") {
         buscarParticipantes();

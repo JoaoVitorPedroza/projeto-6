@@ -1,10 +1,10 @@
 body {
     background-color: #f3f3f3;
     margin: 0;
-    display: flex; /* Habilita o Flexbox no body */
-    flex-direction: column; /* Organiza os filhos em coluna (topo, conteudo, escrever) */
-    min-height: 100vh; /* Garante que o body ocupe pelo menos a altura da tela */
-    box-sizing: border-box; /* Garante que padding e border não afetem a altura total */
+    display: flex; 
+    flex-direction: column;
+    min-height: 100vh; 
+    box-sizing: border-box; 
 }
 
 .topo {
@@ -35,13 +35,13 @@ body {
 }
 
 .conteudo {
-    flex-grow: 1; /* A div 'conteudo' vai crescer para ocupar o espaço restante */
-    background-color: #ffffff; /* Background azul temporário para visualização */
-    overflow-y: auto; /* Adiciona barra de rolagem se o conteúdo exceder a altura */
-    padding-top: 13%; /* Espaço para não ficar atrás do topo */
-    padding-bottom: 80px; /* Espaço para não ficar atrás da barra de escrever */
-    box-sizing: border-box; /* Garante que o padding não afete a altura total */
-    margin-left: 0; /* Inicialmente sem margem */
+    flex-grow: 1; 
+    background-color: #ffffff; 
+    overflow-y: auto; 
+    padding-top: 13%; 
+    padding-bottom: 80px;
+    box-sizing: border-box; 
+    margin-left: 0; 
     transition: margin-left 0.3s ease-in-out;
 }
 
@@ -84,7 +84,7 @@ body {
     cursor: pointer;
     display: flex;
     align-items: center;
-    pointer-events: none; /* Adicione esta linha */
+    pointer-events: none; 
 }
 .saida{
     width: 30px;
@@ -119,10 +119,10 @@ body {
     flex-direction: column;
 }
 .pessoas{
-  font-family: 'Font Awesome 5 Free'; /* Ou a sua biblioteca de ícones */
-  font-weight: 900; /* Estilo do ícone */
-  content: '\f007'; /* Código do ícone (exemplo de usuário) */
-  margin-right: 5px; /* Espaçamento entre o ícone e o texto */
+  font-family: 'Font Awesome 5 Free'; 
+  font-weight: 900; 
+  content: '\f007'; 
+  margin-right: 5px; 
   width: 45px;
   height:45px;
 }
@@ -135,12 +135,12 @@ button {
 }
 .barra_puxada {
     z-index: 100;
-    width: 300px; /* Defina a largura desejada */
+    width: 300px; 
     height: 100%;
     background-color: #f8f8f8;
     position: fixed;
     top: 0;
-    left: -300px; /* Esconde inicialmente (ajuste conforme a largura) */
+    left: -300px; 
     box-sizing: border-box;
     overflow-y: auto;
 }
@@ -149,7 +149,7 @@ button {
     margin-top: -100px;
 }
 .conteudo.barra-aberta {
-    margin-left: 300px; /* Margem para o espaço da barra */
+    margin-left: 300px;
 }
 .caixa{
 left: 116px;

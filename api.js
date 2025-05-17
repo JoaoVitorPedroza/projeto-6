@@ -1,5 +1,5 @@
 let nomeDoUsuario; // Variável para armazenar o nome do usuário
-
+var data = toString(new Date());
 function obterNomeUsuario() {
   // Aqui você teria a lógica para pegar o nome do usuário da interface
   // Por exemplo, de um input de texto
