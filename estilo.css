@@ -5,6 +5,7 @@ body {
     flex-direction: column;
     min-height: 100vh; 
     box-sizing: border-box; 
+    font-family: "Roboto", sans-serif;
 }
 
 .topo {
@@ -199,7 +200,7 @@ h3{
 .bottao_barra{
     width: 100px;
     height: 100px;
-    background-color: red;
+    background-color: #FFFFFF00;
     display: none;
     position: absolute;
     margin-top: 19px;
